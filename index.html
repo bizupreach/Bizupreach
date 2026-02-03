@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BizUpreach | Architecting Digital Intelligence</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                blue: '#007bd5',
+                green: '#10b100',
+                matteBlack: '#282828',
+                navy: '#0a0f1c',
+                deepNavy: '#001021'
+              }
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0) rotate(0deg)' },
+                '50%': { transform: 'translateY(-20px) rotate(2deg)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="components/BizUpreach.png">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #ffffff;
+        scroll-behavior: smooth;
+      }
+      .immersive-navy-gradient {
+        background: radial-gradient(circle at 50% 50%, #002b5c 0%, #0a0f1c 60%, #001021 100%);
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.03);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .accent-gradient-text {
+        background: linear-gradient(135deg, #10b100 0%, #007bd5 50%, #10b100 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: gradient-flow 8s linear infinite;
+      }
+      @keyframes gradient-flow {
+        to { background-position: 200% center; }
+      }
+      .grid-bg-subtle {
+        background-image: radial-gradient(circle at 1px 1px, rgba(0, 123, 213, 0.1) 1px, transparent 0);
+        background-size: 40px 40px;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .rotate-3d {
+        transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        transform-style: preserve-3d;
+      }
+      .rotate-3d:hover {
+        transform: rotateY(10deg) rotateX(5deg) translateZ(20px);
+      }
+      .floating-orb {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(80px);
+        z-index: 0;
+        opacity: 0.4;
+      }
+      ::selection {
+        background: #007bd5;
+        color: white;
+      }
+
+      /* Custom Button Components */
+      .gradient-border-btn {
+        background: rgba(16, 177, 0, 0.1);
+        border: 1px solid rgba(16, 177, 0, 0.4);
+        position: relative;
+        transition: all 0.3s ease;
+      }
+      .gradient-border-btn:hover {
+        background: rgba(16, 177, 0, 0.2);
+        border-color: #10b100;
+        box-shadow: 0 0 30px rgba(16, 177, 0, 0.2);
+      }
+      
+      .secondary-outline-btn {
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+      .secondary-outline-btn:hover {
+        background: rgba(255, 255, 255, 0.08);
+        border-color: rgba(255, 255, 255, 0.3);
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+        "recharts": "https://esm.sh/recharts@^3.7.0",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white text-slate-900 antialiased overflow-x-hidden">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
