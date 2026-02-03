@@ -8,10 +8,10 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="flex items-center space-x-3 mb-8 group">
+            <div className="flex items-center space-x-3 mb-8 group">
               <BrandLogo className="w-8 h-8" light />
               <BrandWordmark light className="text-xl" />
-            </Link>
+            </div>
             <p className="text-sm leading-relaxed mb-6 font-light">
               Engineering technology and intelligence systems for real-world impact across global governance and enterprise.
             </p>
@@ -31,7 +31,6 @@ const Footer: React.FC = () => {
             <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Company</h4>
             <ul className="space-y-3 text-sm">
               <li><Link to="/about" className="hover:text-brand-green transition-colors">Philosophy</Link></li>
-              <li><Link to="/insights" className="hover:text-brand-green transition-colors">Insights</Link></li>
               <li><Link to="/contact" className="hover:text-brand-green transition-colors">Contact</Link></li>
             </ul>
           </div>
@@ -39,7 +38,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold text-xs uppercase tracking-widest mb-6">Connect</h4>
             <div className="space-y-4 text-sm">
-              <p className="font-medium text-slate-300">solutions@bizupreach.com</p>
+              <p className="font-medium text-slate-300">support@bizupreach.com</p>
             </div>
           </div>
         </div>

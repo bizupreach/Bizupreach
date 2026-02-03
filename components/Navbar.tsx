@@ -23,7 +23,6 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Capabilities', path: '/services' },
     { name: 'Philosophy', path: '/about' },
-    { name: 'Insights', path: '/insights' },
   ];
 
   return (
@@ -34,13 +33,15 @@ const Navbar: React.FC = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <Link to="/" className="flex items-center space-x-4 group">
-            <div className="relative">
-              <div className="absolute inset-0 bg-brand-green blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
-              <BrandLogo className="w-10 h-10 transform group-hover:scale-110 transition-transform duration-500 relative z-10" light />
-            </div>
-            <BrandWordmark light className="text-2xl" />
-          </Link>
+          <div className="flex items-center space-x-4 group">
+            <Link to="/" className="flex items-center space-x-4">
+              <div className="relative">
+                <div className="absolute inset-0 bg-brand-green blur-lg opacity-0 group-hover:opacity-40 transition-opacity duration-500"></div>
+                <BrandLogo className="w-10 h-10 transform group-hover:scale-110 transition-transform duration-500 relative z-10" light />
+              </div>
+              <BrandWordmark light className="text-2xl" />
+            </Link>
+          </div>
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center space-x-12">
